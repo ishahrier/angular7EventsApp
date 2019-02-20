@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { EventsAppComponent } from './app.component';
+import { AppMainComponent } from './app.component';
 import { PersonListerComponent } from './persons/person-lister.component';
 import { PersonViewComponent } from './persons/person-view.component';
+import { NavHeaderComponent } from './nav/nav-header.component';
 
 @NgModule({
   imports: [
     BrowserModule
   ],  
   declarations: [
-    EventsAppComponent,
+    AppMainComponent,
     PersonListerComponent,
-    PersonViewComponent
+    PersonViewComponent,
+    NavHeaderComponent
   ],
-  bootstrap: [PersonListerComponent]
+  bootstrap: [AppMainComponent]
 })
 export class AppModule { }

@@ -4,8 +4,9 @@ import { Component } from '@angular/core'
     selector: 'person-lister',
     template: `
         <div>List of person</div>
-        <person-viewer [data]="persons" (personClickEmitter)="handleChildClickEvent($event)" ></person-viewer>
-    `
+        <person-viewer [data]="persons" #pv (personClickEmitter)="handleChildClickEvent($event)" ></person-viewer>
+    `,
+    
 })
 
 export class PersonListerComponent {
