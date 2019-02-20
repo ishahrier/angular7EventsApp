@@ -4,16 +4,36 @@ import { Component } from '@angular/core'
     selector: 'person-lister',
     template: `
         <div>List of person</div>
-        <person-viewer [data]="persons" #pv (personClickEmitter)="handleChildClickEvent($event)" ></person-viewer>
+        <div class='row'>
+            <div class='col-md-5' *ngFor="let p of persons">
+                <person-viewer [data]="p"  (personClickEmitter)="handleChildClickEvent($event)" ></person-viewer>
+            </div>
+        </div>
     `,
     
 })
 
 export class PersonListerComponent {
-    persons = {
+    persons = [{
         name: "Ishtiaque Shahrier",
         age: 36
-    }
+    },
+    {
+        name: "Tanvir Shahrier",
+        age: 18
+    },
+    {
+        name: "Ishtiaque Shaan",
+        age: 66
+    },
+    {
+        name: "Minhaz Shahrier",
+        age: 28
+    },
+    {
+        name: "Janantul Ferdous kheya",
+        age: 21
+    }]
     handleChildClickEvent(data) {
         alert(data);
     }

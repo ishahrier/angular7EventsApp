@@ -5,9 +5,9 @@ import { Component, Input,Output, EventEmitter } from '@angular/core'
     selector: 'person-viewer',
     template: `
         name : {{data.name}} <br/>
-        age: {{data.age}} <hr/>
+        age: {{data.age}} <br/>
         <button (click)= "personClickHandler()" class='btn btn-primary' >Click me!</button>
-
+        <hr/>
     `
 })
 
